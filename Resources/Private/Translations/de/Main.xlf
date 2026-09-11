@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Medienreaktor.NeosStudio.IconSelectEditor" source-language="en" datatype="plaintext" target-language="de">
+    <body>
+      <trans-unit id="editor.placeholder" xml:space="preserve">
+        <source>Select icon</source>
+        <target xml:lang="de">Icon auswählen</target>
+      </trans-unit>
+      <trans-unit id="editor.open" xml:space="preserve">
+        <source>Choose an icon</source>
+        <target xml:lang="de">Icon auswählen</target>
+      </trans-unit>
+      <trans-unit id="editor.remove" xml:space="preserve">
+        <source>Remove icon</source>
+        <target xml:lang="de">Icon entfernen</target>
+      </trans-unit>
+      <trans-unit id="dialog.title" xml:space="preserve">
+        <source>Select icon</source>
+        <target xml:lang="de">Icon auswählen</target>
+      </trans-unit>
+      <trans-unit id="dialog.close" xml:space="preserve">
+        <source>Close</source>
+        <target xml:lang="de">Schließen</target>
+      </trans-unit>
+      <trans-unit id="search.placeholder" xml:space="preserve">
+        <source>Search icons …</source>
+        <target xml:lang="de">Icons suchen …</target>
+      </trans-unit>
+      <trans-unit id="search.clear" xml:space="preserve">
+        <source>Clear search</source>
+        <target xml:lang="de">Suche leeren</target>
+      </trans-unit>
+      <trans-unit id="recent.label" xml:space="preserve">
+        <source>Recently used</source>
+        <target xml:lang="de">Zuletzt verwendet</target>
+      </trans-unit>
+      <trans-unit id="count.one" xml:space="preserve">
+        <source>1 icon</source>
+        <target xml:lang="de">1 Icon</target>
+      </trans-unit>
+      <trans-unit id="count.many" xml:space="preserve">
+        <source>{0} icons</source>
+        <target xml:lang="de">{0} Icons</target>
+      </trans-unit>
+      <trans-unit id="count.filtered" xml:space="preserve">
+        <source>{0} of {1} icons</source>
+        <target xml:lang="de">{0} von {1} Icons</target>
+      </trans-unit>
+      <trans-unit id="empty.noMatch" xml:space="preserve">
+        <source>No icon matches “{0}”.</source>
+        <target xml:lang="de">Kein Icon passt zu „{0}“.</target>
+      </trans-unit>
+      <trans-unit id="empty.noIcons" xml:space="preserve">
+        <source>This source contains no icons.</source>
+        <target xml:lang="de">Diese Quelle enthält keine Icons.</target>
+      </trans-unit>
+      <trans-unit id="loading" xml:space="preserve">
+        <source>Loading icons …</source>
+        <target xml:lang="de">Icons werden geladen …</target>
+      </trans-unit>
+      <trans-unit id="loading.hint" xml:space="preserve">
+        <source>Large icon sets can take a moment.</source>
+        <target xml:lang="de">Große Icon-Sets brauchen einen Moment.</target>
+      </trans-unit>
+      <trans-unit id="error.loadFailed" xml:space="preserve">
+        <source>The icons could not be loaded.</source>
+        <target xml:lang="de">Die Icons konnten nicht geladen werden.</target>
+      </trans-unit>
+      <trans-unit id="error.retry" xml:space="preserve">
+        <source>Try again</source>
+        <target xml:lang="de">Erneut versuchen</target>
+      </trans-unit>
+      <trans-unit id="error.noSources" xml:space="preserve">
+        <source>No icon sources are configured. Set editorOptions.iconSources in the node type definition.</source>
+        <target xml:lang="de">Es sind keine Icon-Quellen konfiguriert. Setze editorOptions.iconSources in der NodeType-Definition.</target>
+      </trans-unit>
+      <trans-unit id="hint.keyboard" xml:space="preserve">
+        <source>Arrow keys to navigate, Enter to select</source>
+        <target xml:lang="de">Pfeiltasten zum Navigieren, Enter zum Auswählen</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

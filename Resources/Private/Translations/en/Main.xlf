@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file original="" product-name="Medienreaktor.NeosStudio.IconSelectEditor" source-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="editor.placeholder" xml:space="preserve">
+        <source>Select icon</source>
+      </trans-unit>
+      <trans-unit id="editor.open" xml:space="preserve">
+        <source>Choose an icon</source>
+      </trans-unit>
+      <trans-unit id="editor.remove" xml:space="preserve">
+        <source>Remove icon</source>
+      </trans-unit>
+      <trans-unit id="dialog.title" xml:space="preserve">
+        <source>Select icon</source>
+      </trans-unit>
+      <trans-unit id="dialog.close" xml:space="preserve">
+        <source>Close</source>
+      </trans-unit>
+      <trans-unit id="search.placeholder" xml:space="preserve">
+        <source>Search icons …</source>
+      </trans-unit>
+      <trans-unit id="search.clear" xml:space="preserve">
+        <source>Clear search</source>
+      </trans-unit>
+      <trans-unit id="recent.label" xml:space="preserve">
+        <source>Recently used</source>
+      </trans-unit>
+      <trans-unit id="count.one" xml:space="preserve">
+        <source>1 icon</source>
+      </trans-unit>
+      <trans-unit id="count.many" xml:space="preserve">
+        <source>{0} icons</source>
+      </trans-unit>
+      <trans-unit id="count.filtered" xml:space="preserve">
+        <source>{0} of {1} icons</source>
+      </trans-unit>
+      <trans-unit id="empty.noMatch" xml:space="preserve">
+        <source>No icon matches “{0}”.</source>
+      </trans-unit>
+      <trans-unit id="empty.noIcons" xml:space="preserve">
+        <source>This source contains no icons.</source>
+      </trans-unit>
+      <trans-unit id="loading" xml:space="preserve">
+        <source>Loading icons …</source>
+      </trans-unit>
+      <trans-unit id="loading.hint" xml:space="preserve">
+        <source>Large icon sets can take a moment.</source>
+      </trans-unit>
+      <trans-unit id="error.loadFailed" xml:space="preserve">
+        <source>The icons could not be loaded.</source>
+      </trans-unit>
+      <trans-unit id="error.retry" xml:space="preserve">
+        <source>Try again</source>
+      </trans-unit>
+      <trans-unit id="error.noSources" xml:space="preserve">
+        <source>No icon sources are configured. Set editorOptions.iconSources in the node type definition.</source>
+      </trans-unit>
+      <trans-unit id="hint.keyboard" xml:space="preserve">
+        <source>Arrow keys to navigate, Enter to select</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
