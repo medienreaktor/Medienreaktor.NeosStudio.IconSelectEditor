@@ -14,7 +14,7 @@
   "require": {
     "php": "^8.2",
     "neos/neos": "^9.1",
-    "medienreaktor/neos-studio": "^1.13",
+    "medienreaktor/neos-studio": "^1.19",
     "beromir/neos-icon-select-editor": "^1.1"
   },
   "extra": {

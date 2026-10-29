@@ -135,8 +135,9 @@ shell's single React instance.
 
 - `ClientEval` expressions in editor options are not evaluated (the classic
   editor does not use any either).
-- The editor needs `Medienreaktor.NeosStudio` ≥ 1.13 for the `editors`
-  registry and `apiFetch`.
+- The editor needs `Medienreaktor.NeosStudio` ≥ 1.19 for its semantic design
+  tokens, which the editor's CSS uses for colours and radii and which follow
+  the light/dark theme (1.13 brought the `editors` registry and `apiFetch`).
 
 ## License
 
