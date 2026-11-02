@@ -17,17 +17,21 @@ import type { IconItem } from './types'
  */
 
 /**
- * The shell's root font size: the reader's default, so the cells grow with the
- * text in them. Read once - browsers apply a changed default on reload.
+ * Lengths are in rem like plugin.css, so the cells grow with the text in them
+ * when the reader's default font size changes. They become pixels only where
+ * the grid reads the screen - scroll offsets and the measured viewport.
  */
-const ROOT_FONT_SIZE =
-  parseFloat(getComputedStyle(document.documentElement).fontSize) || 16
 
-/** Minimum cell width; the column count is whatever fits at that size. */
-const CELL_MIN_WIDTH = 5.375 * ROOT_FONT_SIZE
-/** .mrise-grid-row's height in plugin.css. */
-const ROW_HEIGHT = 5.375 * ROOT_FONT_SIZE
+/** Minimum cell width in rem; the column count is whatever fits at that size. */
+const CELL_MIN_WIDTH = 5.375
+/** .mrise-grid-row's height in plugin.css, in rem. */
+const ROW_HEIGHT = 5.375
 const OVERSCAN_ROWS = 3
+
+/** The root font size in pixels, read fresh - it can change while Studio is open. */
+function rootFontSize(): number {
+  return parseFloat(getComputedStyle(document.documentElement).fontSize) || 16
+}
 
 export interface IconGridProps {
   icons: IconItem[]
@@ -70,9 +74,12 @@ export function IconGrid({
     return () => observer.disconnect()
   }, [])
 
+  const rem = rootFontSize()
+  const rowHeight = ROW_HEIGHT * rem
+  const cellMinWidth = CELL_MIN_WIDTH * rem
   const columns = Math.max(
     1,
-    Math.floor((viewport.width || CELL_MIN_WIDTH) / CELL_MIN_WIDTH),
+    Math.floor((viewport.width || cellMinWidth) / cellMinWidth),
   )
   const rowCount = Math.ceil(icons.length / columns)
 
@@ -96,8 +103,9 @@ export function IconGrid({
   useEffect(() => {
     const element = scrollRef.current
     if (!element || activeIndex < 0) return
-    const rowTop = Math.floor(activeIndex / columns) * ROW_HEIGHT
-    const rowBottom = rowTop + ROW_HEIGHT
+    const rowHeight = ROW_HEIGHT * rootFontSize()
+    const rowTop = Math.floor(activeIndex / columns) * rowHeight
+    const rowBottom = rowTop + rowHeight
     if (rowTop < element.scrollTop) {
       element.scrollTop = rowTop
       setScrollTop(rowTop)
@@ -109,11 +117,11 @@ export function IconGrid({
 
   const firstRow = Math.max(
     0,
-    Math.floor(scrollTop / ROW_HEIGHT) - OVERSCAN_ROWS,
+    Math.floor(scrollTop / rowHeight) - OVERSCAN_ROWS,
   )
   const lastRow = Math.min(
     rowCount - 1,
-    Math.ceil((scrollTop + (viewport.height || ROW_HEIGHT)) / ROW_HEIGHT) +
+    Math.ceil((scrollTop + (viewport.height || rowHeight)) / rowHeight) +
       OVERSCAN_ROWS,
   )
 
@@ -125,7 +133,7 @@ export function IconGrid({
         key={rowIndex}
         className="mrise-grid-row"
         style={{
-          transform: `translateY(${rowIndex * ROW_HEIGHT}px)`,
+          transform: `translateY(${rowIndex * ROW_HEIGHT}rem)`,
           gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
         }}
       >
@@ -156,7 +164,7 @@ export function IconGrid({
     >
       <div
         className="mrise-grid-canvas"
-        style={{ height: rowCount * ROW_HEIGHT }}
+        style={{ height: `${rowCount * ROW_HEIGHT}rem` }}
       >
         {rows}
       </div>
