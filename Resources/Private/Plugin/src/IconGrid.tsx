@@ -24,9 +24,9 @@ const ROOT_FONT_SIZE =
   parseFloat(getComputedStyle(document.documentElement).fontSize) || 16
 
 /** Minimum cell width; the column count is whatever fits at that size. */
-const CELL_MIN_WIDTH = 5.75 * ROOT_FONT_SIZE
+const CELL_MIN_WIDTH = 5.375 * ROOT_FONT_SIZE
 /** .mrise-grid-row's height in plugin.css. */
-const ROW_HEIGHT = 5.75 * ROOT_FONT_SIZE
+const ROW_HEIGHT = 5.375 * ROOT_FONT_SIZE
 const OVERSCAN_ROWS = 3
 
 export interface IconGridProps {
