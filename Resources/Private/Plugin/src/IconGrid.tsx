@@ -16,9 +16,17 @@ import type { IconItem } from './types'
  * otherwise the grid would scroll itself out from under the pointer.
  */
 
+/**
+ * The shell's root font size: the reader's default, so the cells grow with the
+ * text in them. Read once - browsers apply a changed default on reload.
+ */
+const ROOT_FONT_SIZE =
+  parseFloat(getComputedStyle(document.documentElement).fontSize) || 16
+
 /** Minimum cell width; the column count is whatever fits at that size. */
-const CELL_MIN_WIDTH = 92
-const ROW_HEIGHT = 92
+const CELL_MIN_WIDTH = 5.75 * ROOT_FONT_SIZE
+/** .mrise-grid-row's height in plugin.css. */
+const ROW_HEIGHT = 5.75 * ROOT_FONT_SIZE
 const OVERSCAN_ROWS = 3
 
 export interface IconGridProps {

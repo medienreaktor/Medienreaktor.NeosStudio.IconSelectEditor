@@ -5,9 +5,9 @@
  * --color-muted-foreground, --radius-md, ...): the shell emits them as custom
  * properties and switches them with data-theme="light|dark" on <html>, so the
  * plugin follows the theme without declaring anything twice. Font sizes are
- * the pixel sizes of the shell's text styles (type-body 13/18, type-small
- * 11/15, type-caption 10/14, type-heading-m 17/26), which exist only as
- * utilities, not as variables.
+ * the shell's text style variables (--text-body with
+ * --text-body--line-height, ...), in rem, so they follow the reader's default
+ * font size along with the shell.
  *
  * The local properties name the roles that occur more than once; the icon
  * tiles are the shell's outline button (input at 30%, 50% on hover).
@@ -28,8 +28,8 @@
   align-items: center;
   gap: 0.25rem;
   color: var(--color-foreground);
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
 }
 
 .mrise-trigger {
@@ -99,8 +99,8 @@
   border-radius: var(--radius-md);
   background-color: var(--color-muted);
   color: var(--color-muted-foreground);
-  font-size: 10px;
-  line-height: 14px;
+  font-size: var(--text-caption);
+  line-height: var(--text-caption--line-height);
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -110,8 +110,8 @@
   border: 1px dashed var(--color-border);
   border-radius: var(--radius-md);
   color: var(--color-muted-foreground);
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
 }
 
 /* A borderless square button - the shell's `ghost`/`icon-sm` combination. */
@@ -172,8 +172,8 @@
   justify-content: center;
   padding: 1.5rem;
   color: var(--color-foreground);
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
 }
 
 .mrise-backdrop {
@@ -234,8 +234,8 @@
 
 .mrise-title {
   margin: 0;
-  font-size: 17px;
-  line-height: 26px;
+  font-size: var(--text-heading-m);
+  line-height: var(--text-heading-m--line-height);
   font-weight: 600;
 }
 
@@ -331,8 +331,8 @@
 .mrise-recents-label {
   flex: none;
   color: var(--color-muted-foreground);
-  font-size: 10px;
-  line-height: 10px;
+  font-size: var(--text-overline);
+  line-height: var(--text-overline--line-height);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.025em;
@@ -409,7 +409,8 @@
   left: 0;
   display: grid;
   width: 100%;
-  height: 92px;
+  /* ROW_HEIGHT in IconGrid.tsx. */
+  height: 5.75rem;
   gap: 0.25rem;
   padding: 0.125rem;
 }
@@ -458,8 +459,9 @@
   width: 100%;
   overflow: hidden;
   color: inherit;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: var(--text-caption);
+  /* Tighter than the style's own, so two lines fit the cell. */
+  line-height: 1.2;
   text-align: center;
   /* Two lines at most; long Font Awesome names get an ellipsis. */
   display: -webkit-box;
@@ -515,7 +517,7 @@
 .mrise-status-icon {
   margin-bottom: 0.75rem;
   color: var(--color-muted-foreground);
-  font-size: 24px;
+  font-size: var(--text-icon-3xl);
 }
 
 .mrise-status-title {
@@ -527,8 +529,8 @@
   margin: 0.25rem 0 0;
   max-width: 32rem;
   color: var(--color-muted-foreground);
-  font-size: 13px;
-  line-height: 18px;
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
 }
 
 .mrise-panel-foot {
@@ -537,8 +539,8 @@
   justify-content: space-between;
   gap: 1rem;
   color: var(--color-muted-foreground);
-  font-size: 11px;
-  line-height: 15px;
+  font-size: var(--text-small);
+  line-height: var(--text-small--line-height);
 }
 
 .mrise-hint {
