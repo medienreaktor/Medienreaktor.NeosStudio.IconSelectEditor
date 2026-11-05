@@ -1,5 +1,10 @@
 # Medienreaktor.NeosStudio.IconSelectEditor
 
+[![Packagist Version](https://img.shields.io/packagist/v/medienreaktor/neos-studio-icon-select-editor)](https://packagist.org/packages/medienreaktor/neos-studio-icon-select-editor)
+[![PHP Version Support](https://img.shields.io/packagist/dependency-v/medienreaktor/neos-studio-icon-select-editor/php)](https://www.php.net/)
+[![Test Status](https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/actions/workflows/ci.yml/badge.svg)](https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
+
 The icon select editor for **Neos Studio** (`Medienreaktor.NeosStudio`): pick
 an SVG icon from one or more configured icon folders.
 
@@ -80,8 +85,8 @@ Worth knowing, because it is the one behavioural difference:
 
 The data source inlines the SVG markup of every file it finds. The classic
 editor requested **all** configured sources at once, when the inspector
-mounted. For a property offering the SWK set plus three Font Awesome folders
-that is around 10.000 SVGs and tens of megabytes - fetched and parsed before
+mounted. For a property offering a site's own icon set plus three Font Awesome
+folders that is around 10.000 SVGs and tens of megabytes - fetched and parsed before
 the inspector could paint, on every node selection.
 
 This editor asks for one source at a time, and only for the source actually
@@ -112,6 +117,10 @@ npm run build        # emits Resources/Public/Plugin/{plugin.js,plugin.css}
 Then flush the Flow caches and reload `/neos/studio`. `npm run dev` rebuilds on
 change.
 
+Run `npm run format` before committing. CI checks the formatting, type-checks
+and builds the plugin against the Neos Studio release `composer.json` requires,
+and fails when the result differs from the committed bundle.
+
 Note: `@medienreaktor/neos-studio` (the type declarations of the Studio plugin
 API) is a `file:` dependency. It is resolved **relative to this package's place
 inside a Neos distribution**, and the committed path assumes the working copy
@@ -135,8 +144,9 @@ shell's single React instance.
 
 - `ClientEval` expressions in editor options are not evaluated (the classic
   editor does not use any either).
-- The editor needs `Medienreaktor.NeosStudio` ≥ 1.13 for the `editors`
-  registry and `apiFetch`.
+- The editor needs `Medienreaktor.NeosStudio` ≥ 1.19.1 for its semantic design
+  tokens, which the editor's CSS uses for colours and radii and which follow
+  the light/dark theme (1.13 brought the `editors` registry and `apiFetch`).
 
 ## License
 

@@ -1,14 +1,16 @@
 {
   "name": "@medienreaktor/neos-studio-icon-select-editor",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
     "build": "tsc && vite build",
-    "dev": "vite build --watch"
+    "dev": "vite build --watch",
+    "format": "prettier --write src",
+    "format:check": "prettier --check src"
   },
   "comment": "@medienreaktor/neos-studio provides the plugin API TYPES only (generated from the shell); at runtime it and react/react-dom are marked external in vite.config.ts and resolved from the shell's copy on window (see src/main.tsx). All build/type-time only. Keep react majors aligned with the host so types match.",
   "devDependencies": {
@@ -16,6 +18,7 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.3",
+    "prettier": "^3.9.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "typescript": "^7.0.2",
