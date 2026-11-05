@@ -472,8 +472,8 @@
 }
 
 /*
- * The inlined SVGs: Font Awesome paths carry fill="currentColor", the SWK set
- * strokes with stroke="currentColor" - both follow the cell's text colour, so
+ * The inlined SVGs: Font Awesome paths carry fill="currentColor", line icon
+ * sets stroke with stroke="currentColor" - both follow the cell's text colour, so
  * selection and hover recolour the icon without touching the markup.
  */
 .mrise-cell-icon {
