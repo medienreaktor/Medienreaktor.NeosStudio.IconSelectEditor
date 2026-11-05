@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v1.1.0] - 2026-11-05
+
 ### Changed
 
 - **The editor takes Neos Studio's design tokens.** The field and the picker
@@ -41,5 +43,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Icons are fetched one source at a time, only for the source being looked
   at, instead of every configured source when the inspector opens.
 
-[Unreleased]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.1.0...HEAD
+[v1.1.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.0.0...v1.1.0
 [v1.0.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/releases/tag/v1.0.0
