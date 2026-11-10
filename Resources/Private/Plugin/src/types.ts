@@ -37,8 +37,8 @@ export interface IconValue {
 
 /** The raw data source payload for a single-source request. */
 export interface IconSourcesResponse {
-  iconSources?: IconItem[][]
-  iconSourceNames?: string[]
+  iconSources?: IconItem[][] | Record<string, IconItem[]>
+  iconSourceNames?: string[] | Record<string, string>
 }
 
 /** Narrow an unknown property value to a stored icon. */

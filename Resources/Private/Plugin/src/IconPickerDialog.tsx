@@ -1,3 +1,4 @@
+import type { AnyNodeAddress } from './studio'
 import {
   useCallback,
   useDeferredValue,
@@ -41,7 +42,7 @@ export interface IconPickerDialogProps {
   selectedUri: string | null
   /** Which source to open on - the stored value's, if it is still configured. */
   initialSourceIndex: number
-  nodeAddress?: string
+  nodeAddress?: AnyNodeAddress
   onSelect: (item: IconItem) => void
   onClose: () => void
 }

@@ -1,3 +1,4 @@
+import { addressKey } from './studio'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { PropertyEditorProps } from '@medienreaktor/neos-studio'
 import { IconPickerDialog } from './IconPickerDialog'
@@ -99,7 +100,7 @@ export function IconSelectEditor({
     return () => {
       cancelled = true
     }
-  }, [selected, sources, nodeAddress])
+  }, [selected, sources, addressKey(nodeAddress)])
 
   const select = (item: IconItem) => {
     const next: IconValue = {

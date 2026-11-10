@@ -132,7 +132,7 @@ jobs:
 
   # The package ships its plugin prebuilt in Resources/Public/Plugin, so what
   # installations run is whatever was committed there, not what the sources say.
-  # This job builds the sources against the Studio release this package requires
+  # This job builds the sources against the plugin API types package-lock.json pins
   # and fails when the result differs from the committed build, which also covers
   # the type check `npm run build` runs.
   frontend:
@@ -150,15 +150,8 @@ jobs:
         with:
           path: DistributionPackages/Medienreaktor.NeosStudio.IconSelectEditor
 
-      # The Studio release this package requires, in the layout of a Neos distribution, which is where its package.json links the
-      # Studio's plugin API types from (../../../../../Packages/Application/...). Move the ref along with the
-      # medienreaktor/neos-studio constraint in composer.json.
-      - name: Checkout Neos Studio 1.19.1
-        uses: actions/checkout@v7
-        with:
-          repository: medienreaktor/Medienreaktor.NeosStudio
-          ref: '1.19.1'
-          path: Packages/Application/Medienreaktor.NeosStudio
+      # The Studio's plugin API types come from npm (@medienreaktor/neos-studio, published with every Studio release),
+      # pinned by package-lock.json, so no Studio checkout is needed.
 
       # .nvmrc is the one place the Node version is pinned; the build output
       # depends on it, so CI reads the same file a developer's toolchain does.

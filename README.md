@@ -118,23 +118,13 @@ Then flush the Flow caches and reload `/neos/studio`. `npm run dev` rebuilds on
 change.
 
 Run `npm run format` before committing. CI checks the formatting, type-checks
-and builds the plugin against the Neos Studio release `composer.json` requires,
+and builds the plugin against the plugin API types `package-lock.json` pins,
 and fails when the result differs from the committed bundle.
 
-Note: `@medienreaktor/neos-studio` (the type declarations of the Studio plugin
-API) is a `file:` dependency. It is resolved **relative to this package's place
-inside a Neos distribution**, and the committed path assumes the working copy
-sits at `DistributionPackages/Medienreaktor.NeosStudio.IconSelectEditor/` next
-to an installed `Packages/Application/Medienreaktor.NeosStudio/`:
-
-```
-"@medienreaktor/neos-studio": "file:../../../../../Packages/Application/Medienreaktor.NeosStudio/Resources/Private/StudioApi"
-```
-
-Cloned anywhere else - standalone, or installed by Composer under
-`Packages/Plugins/` - that path does not resolve and `npm install` fails.
-Adjust it in `Resources/Private/Plugin/package.json` to wherever your Studio
-package is; it is needed for types only, so a build is the only thing affected.
+The type declarations of the Studio plugin API come from npm
+(`@medienreaktor/neos-studio`, published with every Studio release). They are
+version 2's; the editor runs in Neos Studio 1 (≥ 1.19.1) and 2 alike and asks at
+runtime which one it is in (`src/studio.ts`).
 
 React, ReactDOM and the plugin API are external at runtime and resolve to the
 globals the Studio shell publishes on `window`, so the plugin renders with the
