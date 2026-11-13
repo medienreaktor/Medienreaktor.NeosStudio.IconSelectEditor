@@ -10,7 +10,8 @@
     "build": "tsc && vite build",
     "dev": "vite build --watch",
     "format": "prettier --write src",
-    "format:check": "prettier --check src"
+    "format:check": "prettier --check src",
+    "lint": "prettier --check src"
   },
   "comment": "@medienreaktor/neos-studio provides the plugin API TYPES only (generated from the shell); at runtime it and react/react-dom are marked external in vite.config.ts and resolved from the shell's copy on window (see src/main.tsx). All build/type-time only. Keep react majors aligned with the host so types match.",
   "devDependencies": {
