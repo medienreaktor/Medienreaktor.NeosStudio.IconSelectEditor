@@ -2,7 +2,7 @@
 
 [![Packagist Version](https://img.shields.io/packagist/v/medienreaktor/neos-studio-icon-select-editor)](https://packagist.org/packages/medienreaktor/neos-studio-icon-select-editor)
 [![PHP Version Support](https://img.shields.io/packagist/dependency-v/medienreaktor/neos-studio-icon-select-editor/php)](https://www.php.net/)
-[![Test Status](https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/actions/workflows/ci.yml/badge.svg)](https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/actions/workflows/ci.yml)
+[![CI](https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](LICENSE)
 
 The icon select editor for **Neos Studio** (`Medienreaktor.NeosStudio`): pick
