@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [v1.2.0] - 2026-11-10
+## [1.2.0] - 2026-11-10
 
 ### Added
 
@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The plugin API types come from npm (`@medienreaktor/neos-studio`) instead of a
   `file:` path into an installed Studio, so the plugin builds anywhere.
 
-## [v1.1.0] - 2026-11-05
+## [1.1.0] - 2026-11-05
 
 ### Changed
 
@@ -42,7 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   font size while Studio is open; the row height and cell width were pixels
   computed once.
 
-## [v1.0.0] - 2026-09-11
+## [1.0.0] - 2026-09-11
 
 ### Added
 
@@ -58,6 +58,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   at, instead of every configured source when the inspector opens.
 
 [Unreleased]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.2.0...HEAD
-[v1.2.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.1.0...v1.2.0
-[v1.1.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.0.0...v1.1.0
-[v1.0.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/releases/tag/v1.0.0
+[1.2.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/medienreaktor/Medienreaktor.NeosStudio.IconSelectEditor/releases/tag/v1.0.0
